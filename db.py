@@ -4,5 +4,5 @@ from pymongo import MongoClient
 class Connection:
     def __new__(cls, database):
         """new is a method called before an instance of a class is created"""
-        connection = MongoClient("mongodb+srv://rebeccawaweru:turntisbae@cluster0.91mfo.mongodb.net/Realestate?retryWrites=true&w=majority")
+        connection = MongoClient("")
         return connection[database]
