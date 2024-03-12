@@ -12,3 +12,9 @@
 
 Overall, `pipenv` provides a user-friendly interface for Python developers to manage dependencies and environments, making it easier to work on Python projects with clear and consistent dependencies.
 
+
+Dependencies
+render_template - used to render html content
+url_for - used to generate urls
+request - access content
+redirect -

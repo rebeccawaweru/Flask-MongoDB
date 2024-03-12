@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: navy;
+    color: white;
+    padding: 20px;
+}
+main {
+    padding: 20px;
+}
+form > div{
+    margin-bottom: 20px;
+}
+input, button {
+    padding: 8px;
+}
+button {
+    background-color: navy;
+    color: white;
+    border: none;
+}
+button:hover, .movie:hover {
+    background-color: green;
+}
+.movie {
+    display: flex;
+    background-color: navy;
+    padding: 5px;
+    margin: 10px 0px;
+    color: white;
+}
+.movie > p {
+    margin-right: 20px;
+}
+.delete {
+    background-color: darkred;
+}

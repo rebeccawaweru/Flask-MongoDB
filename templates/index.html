@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+   <nav>
+    <h2>Movie Flix</h2>
+    <form>
+     <label for="movie">Search</label>
+     <input name="movie" type="text" required/>
+    </form>
+   </nav>
+   
+   <main>
+    <!-- <p>Latest Movies</p> -->
+    <form method="POST">
+        <div>
+            <p><label for="movie">Name</label></p>  
+            <input name="movie" type="text" placeholder="movie...." required/>
+        </div>
+        <div>
+            <p><label for="overview">Hot-Take</label></p>
+            <input name="overview" type="radio" value="Bad" />Bad
+            <input name="overview" type="radio" value="Neutral"/>Neutral
+            <input name="overview" type="radio" value="Good"/>Good
+            <input name="overview" type="radio" value="Excellent"/>Excellent
+        </div>
+        <div>
+            <button type="submit">+ Add</button>
+        </div>
+    </form>
+    <hr>
+    {% for movie in movies %}
+    <div class="movie">
+        <p>{{movie.movie}}</p>
+        <p>{{movie.overview}}</p>
+    </div>
+    <form method="POST" action="{{url_for('delete', movie_id=movie['_id'])}}">
+        <button class="delete" onclick="return confirm('Are you sure you want to delete this entry?')" type="submit">Delete</button>
+    </form>
+     {% endfor %}
+   </main>
+
+</body>
+</html>
